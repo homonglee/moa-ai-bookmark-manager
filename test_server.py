@@ -24,6 +24,15 @@ def test_analyzes_captionless_video_from_frames():
     assert result["tags"]
 
 
+def test_banner_assets_are_served():
+    client = TestClient(app)
+    for asset in ("idea-banner-copy.jpg", "idea-banner-apps.jpg"):
+        response = client.get(f"/assets/{asset}")
+        assert response.status_code == 200
+        assert response.headers["content-type"] == "image/jpeg"
+        assert response.content
+
+
 def test_favicon_does_not_create_browser_console_error():
     response = TestClient(app).get("/favicon.ico")
     assert response.status_code == 204
