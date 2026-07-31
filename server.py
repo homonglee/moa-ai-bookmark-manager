@@ -10,7 +10,6 @@ from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse, Response
-from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 ROOT = Path(__file__).resolve().parent
@@ -200,7 +199,6 @@ class AnalyzeRequest(BaseModel):
 
 
 app = FastAPI(title="모아 YouTube 분석 API")
-app.mount("/assets", StaticFiles(directory=ROOT / "assets"), name="assets")
 
 
 @app.get("/")
