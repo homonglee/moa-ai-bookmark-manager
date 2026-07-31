@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Node / local QA
+node_modules/
+package-lock.json
+preview*.png
+verified-analysis.png
+probe.mp4
+*test*.html
+qa-ui.js
+interaction-test.js
+
+# Provider / editor metadata
+.vercel/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,11 @@
+.git/
+.vercel/
+node_modules/
+__pycache__/
+.pytest_cache/
+.venv/
+preview*.png
+verified-analysis.png
+probe.mp4
+qa-ui.js
+interaction-test.js
